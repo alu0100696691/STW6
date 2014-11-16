@@ -51,3 +51,10 @@ get '/update' do
   HTML
 end
 
+get '/salir' do
+        usuarios.delete_if { |element| element == session[:nombre]}
+        session.clear
+        redirect '/'
+
+end
+
