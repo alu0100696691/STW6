@@ -1,4 +1,4 @@
-#jQuery Chat
+#Práctica: Chat Usando Ajax y jQuery
 
 Example of how to build a simple chat using jQuery and Sinatra
 
