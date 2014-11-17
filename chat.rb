@@ -5,8 +5,12 @@ require 'sinatra/flash'
 #set :environment, :production
 
 enable :sessions
+#use Rack::Session::Pool, :expire_after => 2592000
 set :session_secret, '*&(^#234a)'
 
+#use Rack::Session::Cookie, :key => 'rack.session',
+#                           :path => '/',
+#                           :secret => '*&(^#234a)'
 
 
 chat = ['welcome..']
@@ -21,8 +25,8 @@ end
 post '/index' do
 	puts "inside post '/index/': #{params}"
         if !usuarios.include?(params[:nombre]) then
-                session[:nombre] = params[:nombre]
-                usuarios.push session[:nombre]
+                session[:usuario] = params[:nombre]
+                usuarios.push session[:usuario]
                 @listaUsuarios = usuarios
                 erb :index
         else
@@ -34,7 +38,7 @@ end
 
 get '/send' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
-  chat << "#{session[:nombre]} : #{params['text']}"
+  chat << "#{session[:usuario]} : #{params['text']}"
   nil
 end
 
@@ -64,7 +68,7 @@ get '/update/usuarios' do
 end
 
 get '/salir' do
-        usuarios.delete_if { |element| element == session[:nombre]}
+        usuarios.delete_if { |element| element == session[:usuario]}
         session.clear
         redirect '/'
 
