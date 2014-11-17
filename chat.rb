@@ -5,13 +5,7 @@ require 'sinatra/flash'
 #set :environment, :production
 
 enable :sessions
-#use Rack::Session::Pool, :expire_after => 2592000
 set :session_secret, '*&(^#234a)'
-
-#use Rack::Session::Cookie, :key => 'rack.session',
-#                           :path => '/',
-#                           :secret => '*&(^#234a)'
-
 
 chat = ['welcome..']
 usuarios = Array.new
