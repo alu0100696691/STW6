@@ -9,7 +9,7 @@
                 <link href="css/bootstrap.min.css" rel="stylesheet">
                 <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body>
+  <body onunload= "cerrarSession()">
   <div class="container">
         <div class="row">
                 <div class="col-md-12">
@@ -25,7 +25,6 @@
                                 </div>
                                 <div class="panel-footer">
                                         <input id="text" class="form-control" placeholder="Escribe y luego pulsa Enter." autofocus />
-                                        <a class="btn btn-large btn-info" href="/salir">Salir</a>
                                 </div>
                         </div>
                 </div>
