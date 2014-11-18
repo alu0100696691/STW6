@@ -24,7 +24,7 @@ post '/index' do
                 @listaUsuarios = usuarios
                 erb :index
         else
-                flash[:error] = "Ese nombre ya existe, por favor, prueba con otro nombre de usuario."
+                flash[:error] = "Ese nombre ya existe, por favor, prueba con otro nombre."
                 redirect '/'
         end
 
