@@ -35,3 +35,10 @@ function cerrarSession() {
 	$.get('/salir');
 	$.get('/');
 };
+
+$('#enviar').click(
+   function(){
+      $.get('/send',{text:$('#text').val()});
+      $('#text').val('');
+   }
+);
