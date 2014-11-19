@@ -9,7 +9,6 @@ gem 'rest-client'
 group :production do
 	gem 'pg'
 	gem 'dm-postgres-adapter'
-	gem 'do_postgres'
 end
 
 group :development, :test do
