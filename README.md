@@ -2,9 +2,13 @@
 
 ##Práctica: Chat Usando Ajax y jQuery
 
+-------------------------------------------------------------------
+
 **Autores:** Jose Antonio Rodríguez Leandro y Noelia Rodríguez Martín
 			 
 **Fecha:** 16 de Noviembre de 2014
+
+-------------------------------------------------------------------
 
 **Detalles:**
 
@@ -20,13 +24,13 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 * En otro los mensajes.
 
-* En un tercero con un botón send la entrada para el siguiente mensaje del usuario.
+* En un tercero con un botón "enviar" la entrada para el siguiente mensaje del usuario.
 
-* Escriba las pruebas. Use Selenium
+* Escriba las pruebas. Se usa Selenium
 
 * Despliegue las pruebas en Travis
 
-* Haga un análisis de cubrimiento usando Coveralls Repase la sección Coveralls: Análisis de Cubrimiento 20.7
+* Haga un análisis de cubrimiento usando Coveralls Repase la sección Coveralls: Análisis de Cubrimiento 
 
 ###Despliegue en Heroku 	
 
