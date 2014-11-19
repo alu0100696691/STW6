@@ -44,8 +44,10 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 `rake`
 
+###Integración continua en Travis
 
-Example of how to build a simple chat using jQuery and Sinatra
+[![Build Status](https://travis-ci.org/alu0100696691/STW6.svg?branch=master)](https://travis-ci.org/alu0100696691/STW6)
+
 
 ###See 
 Blazeeboy gist [https://gist.github.com/blazeeboy/9289678](https://gist.github.com/blazeeboy/9289678)
