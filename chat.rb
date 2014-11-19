@@ -68,3 +68,9 @@ get '/salir' do
 
 end
 
+get '/limpiar' do
+	usuarios.clear
+	chat.clear
+	@listaUsuarios = usuarios
+	redirect '/'
+end
