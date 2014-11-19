@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 ENV['RACK_ENV'] = 'test'
 require_relative '../chat.rb'
+require 'test/unit'
 require 'minitest/autorun'
 require 'rack/test'
 require 'sinatra'
