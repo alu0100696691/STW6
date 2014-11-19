@@ -7,10 +7,14 @@ require 'sinatra'
 require 'selenium-webdriver'
 require 'rubygems'
 
+
 describe "test selenium pagina registro" do
 	before :all do
 		@browser = Selenium::WebDriver.for :firefox
-		@url = 'localhost:4567/'
+		@url = 'https://chatstw6.herokuapp.com/'
+		if (ARGV[0].to_s == "localhost")
+			@url = 'localhost:4567/'
+		end
 		@browser.get(@url)		
 	end
 	it "se abre pagina de Registro?" do
@@ -29,7 +33,7 @@ describe "test selenium pagina registro" do
 			element = @browser.find_element(:id,"login")
 		ensure
 			element.click
-			assert_equal("http://localhost:4567/index",@browser.current_url)
+			assert_equal("https://chatstw6.herokuapp.com/index",@browser.current_url)
 			@browser.quit
 		end
 
@@ -41,8 +45,8 @@ describe "test selenium pagina registro" do
                         element = @browser.find_element(:id,"login")
                 ensure
                         element.click
-			flash = @browser.find_element(:id,"divAviso").find_element(:id,"aviso").text.to_s
-			assert_equal(false, flash.include?("Ese nombre ya existe, por favor, prueba con otro nombre."))
+			flash = @browser.find_element(:id,"aviso").text
+			assert_equal("Ese nombre ya existe, por favor, prueba con otro nombre.", flash)
 			@browser.quit
                 end
 
@@ -51,38 +55,45 @@ describe "test selenium pagina registro" do
 
 end
 
+
+
 describe "test selenium pagina home" do
         before :all do
                 @browser = Selenium::WebDriver.for :firefox
-                @url = 'localhost:4567/'
+		@url = 'https://chatstw6.herokuapp.com/'
+                if (ARGV[0].to_s == "localhost")
+                        @url = 'localhost:4567/'
+                end
                 @browser.get(@url)
+
 		@wait = Selenium::WebDriver::Wait.new(:timeout => 5)
         end
 
 	after :all do
 		@browser.quit
 	end
-        it "se abre pagina de home?" do
+        
+	it "se abre pagina de home?" do
         	@browser.find_element(:id,"nombre").send_keys("luis")
                 begin
                         element = @browser.find_element(:id,"login")
                 ensure
                         element.click
-                        assert_equal("http://localhost:4567/index",@browser.current_url)
+                        assert_equal("https://chatstw6.herokuapp.com/index",@browser.current_url)
                 end
 	end
-
+	
 	it "se actualiza el chat con nuevos comentarios?" do
                 begin
                         @browser.find_element(:id,"nombre").send_keys("juan")
 			@browser.find_element(:id,"login").click
-			@wait.until { @browser.find_element(:id,"text").send_keys("hola") }
-			element = @wait.until { @browser.find_element(:id,"enviar") }
-			chat = @wait.until { @browser.find_element(:id,"chat") }
                 ensure
-                        element.click
-			chat = chat.text.to_s
-			assert_equal(false, chat.include?("juan : hola"))
+			element = @browser.find_element(:id,"text")
+			element.send_keys("yuhu")
+			element.send_keys:return
+			chat = @browser.find_element(:id,"chat").text
+			puts chat
+			assert_equal("",chat)
 		end
 	end
 end
