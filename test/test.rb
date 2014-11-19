@@ -8,6 +8,12 @@ require 'sinatra'
 require 'selenium-webdriver'
 require 'rubygems'
 
+include Rack::Test::Methods
+
+def app
+	Sinatra::Application
+end
+
 
 describe "test selenium pagina registro" do
 	before :all do
