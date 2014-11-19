@@ -2,7 +2,6 @@
 
 ##Práctica: Chat Usando Ajax y jQuery
 
--------------------------------------------------------------------
 
 **Autores:** Jose Antonio Rodríguez Leandro y Noelia Rodríguez Martín
 			 
