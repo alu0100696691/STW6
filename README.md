@@ -14,11 +14,13 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 * Si el nombre del usuario esta tomado se señalara el error y se le pedirá que cambie de nombre.
 
-* Una vez en el chat: 
+### Una vez en el chat: 
 
->En un contenedor aparecen los nombres de usuario.
->En otro los mensajes.
->En un tercero con un botón send la entrada para el siguiente mensaje del usuario.
+* En un contenedor aparecen los nombres de usuario.
+
+* En otro los mensajes.
+
+* En un tercero con un botón send la entrada para el siguiente mensaje del usuario.
 
 * Escriba las pruebas. Use Selenium
 
@@ -28,18 +30,31 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 *Despliegue en Heroku 	
 
+[abrir](https://chatstw6.herokuapp.com/)
+
+###Ejecución
+
+`rake server'
+
+###Test
+
+`rake' 
+
+
 Example of how to build a simple chat using jQuery and Sinatra
 
 ###See 
 Blazeeboy gist [https://gist.github.com/blazeeboy/9289678](https://gist.github.com/blazeeboy/9289678)
 
-* Estos enlaces pueden ser de ayuda:
+-------------------------------------------------------------------------------
 
->Un Chat con Ajax y JQuery 41.4
->Código del chat en GitHub
->Integración Contínua: Travis 20
->Build a Sinatra API Using TDD, Heroku, and Continuous Integration with Travis 35.0.2
->Sample app with Sinatra Rspec Capybara and Selenium 35.0.4
->Capybara 18
->Coveralls: Análisis de Cubrimiento 20.7
+### Estos enlaces pueden ser de ayuda:
+
+* Código del [chat](https://github.com/crguezl/chat-blazee) en GitHub
+
+* Integración Contínua: [Travis](https://travis-ci.org/)
+
+* [Selenium](http://www.seleniumhq.org/)
+
+* [Coveralls](http://nereida.deioc.ull.es/~lpp/perlexamples/node314.html#section:coveralls): Análisis de Cubrimiento 20.7
 
