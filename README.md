@@ -28,17 +28,17 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 * Haga un análisis de cubrimiento usando Coveralls Repase la sección Coveralls: Análisis de Cubrimiento 20.7
 
-*Despliegue en Heroku 	
+###Despliegue en Heroku 	
 
 [abrir](https://chatstw6.herokuapp.com/)
 
 ###Ejecución
 
-`rake server'
+`rake server`
 
 ###Test
 
-`rake' 
+`rake`
 
 
 Example of how to build a simple chat using jQuery and Sinatra
