@@ -51,7 +51,7 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 ###Coveralls: Análisis de Cubrimiento
 
-![Coverage Status](https://img.shields.io/coveralls/alu0100696691/STW6.svg)](https://coveralls.io/r/alu0100696691/STW6)
+[![Coverage Status](https://img.shields.io/coveralls/alu0100696691/STW6.svg)](https://coveralls.io/r/alu0100696691/STW6)
 
 
 
