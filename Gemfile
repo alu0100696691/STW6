@@ -13,4 +13,5 @@ group :development, :test do
 	gem 'rake'
 	gem 'minitest'
 	gem 'test-unit'
+	gem 'coveralls', require: false
 end
