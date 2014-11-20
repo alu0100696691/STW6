@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
-    backports (3.6.3)
+    backports (3.6.4)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     daemons (1.1.9)
@@ -21,7 +21,7 @@ GEM
     eventmachine (1.0.3)
     ffi (1.9.6)
     mime-types (2.4.3)
-    minitest (5.4.2)
+    minitest (5.4.3)
     multi_json (1.10.1)
     netrc (0.8.0)
     pg (0.17.1)
@@ -56,10 +56,10 @@ GEM
       sinatra (>= 1.0.0)
     test-unit (3.0.7)
       power_assert
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     tilt (1.4.1)
     websocket (1.2.1)
 
