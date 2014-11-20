@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'coveralls'            
-Coveralls.wear!
 ENV['RACK_ENV'] = 'test'
 require_relative '../chat.rb'
 require 'test/unit'
@@ -9,6 +7,8 @@ require 'rack/test'
 require 'sinatra'
 require 'selenium-webdriver'
 require 'rubygems'
+require 'coveralls'            
+Coveralls.wear!
 
 include Rack::Test::Methods
 
