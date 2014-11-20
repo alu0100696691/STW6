@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+require 'coveralls'
+Coveralls.wear!
 ENV['RACK_ENV'] = 'test'
 require_relative '../chat.rb'
 require 'test/unit'
@@ -7,8 +9,6 @@ require 'rack/test'
 require 'sinatra'
 require 'selenium-webdriver'
 require 'rubygems'
-require 'coveralls'            
-Coveralls.wear!
 
 include Rack::Test::Methods
 
@@ -27,7 +27,17 @@ describe "test selenium pagina registro" do
 		@browser.get(@url)
 	end
 	
-		it "se abre pagina de Registro?" do
+	it "limpiar datos" do
+		begin
+			element  = @browser.find_element(:link, "6")
+		ensure
+			element.click
+			@browser.quit
+		end
+	end	
+
+
+	it "se abre pagina de Registro?" do
 		begin
 			element = @browser.find_element(:id,"login")
 		ensure
