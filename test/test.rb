@@ -24,9 +24,10 @@ describe "test selenium pagina registro" do
 		if (ARGV[0].to_s == "localhost")
 			@url = 'localhost:4567/'
 		end
-		@browser.get(@url)		
+		@browser.get(@url)
 	end
-	it "se abre pagina de Registro?" do
+	
+		it "se abre pagina de Registro?" do
 		begin
 			element = @browser.find_element(:id,"login")
 		ensure

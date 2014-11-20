@@ -35,6 +35,7 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 
 [abrir](https://chatstw6.herokuapp.com/)
 
+
 ###Ejecución
 
 `rake server`
@@ -46,6 +47,12 @@ Modifique el chat visto en la sección Un Chat con Ajax y JQuery 41.4 para que:
 ###Integración continua en Travis
 
 [![Build Status](https://travis-ci.org/alu0100696691/STW6.svg?branch=master)](https://travis-ci.org/alu0100696691/STW6)
+
+
+###Coveralls: Análisis de Cubrimiento
+
+![Coverage Status](https://img.shields.io/coveralls/alu0100696691/STW6.svg)](https://coveralls.io/r/alu0100696691/STW6)
+
 
 
 ###See 
