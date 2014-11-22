@@ -22,7 +22,7 @@ describe "test pagina registro y home" do
 
 	it "registrar un nuevo usuario" do
 		post '/' , :text => "usuario"
-		expect(last_response).to be_ok
+		expect(last_response.body).to eq("")
 	end
 
 	it "Acceso a actualizar usuarios" do
