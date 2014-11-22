@@ -27,6 +27,6 @@ end
 
 desc "tests spec"
 task :spec do
-	sh "bundle exec rspec spec"
+	sh "bundle exec rspec -I. spec/spec.rb"
 end
 
