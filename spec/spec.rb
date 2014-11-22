@@ -25,5 +25,24 @@ describe "test pagina registro y home" do
 		expect(last_response).to be_ok
 	end
 
+	it "Acceso a actualizar usuarios" do
+		get '/update/usuarios'
+		expect(last_response.body).to eq("Not an ajax request")
+	end
+
+	it "cerrar sesion" do
+		get '/salir'
+		expect(last_response.body).to eq("")
+	end
+
+	it "Acceso a send" do
+		get '/send'
+		expect(last_response.body).to eq("Not an ajax request")
+	end
+
+	it "Acceso a update" do
+		get '/update'
+		expect(last_response.body).to eq("Not an ajax request")
+	end
 
 end

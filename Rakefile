@@ -21,6 +21,12 @@ task :open do
 end
 
 desc "Run tests"
-task :tests do
+task :tests  => :spec do
 	sh "ruby test/test.rb"
 end
+
+desc "tests spec"
+task :spec do
+	sh "bundle exec rspec spec"
+end
+
